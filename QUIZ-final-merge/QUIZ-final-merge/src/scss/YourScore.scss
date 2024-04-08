@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif; /* Apply Poppins font to all elements */
+}
+
+.info {
+  display: flex;
+  margin: 16px 0;
+  justify-content: center;
+  text-align: center;
+}
+
+.info_Content {
+  margin-left: 16px;
+}
+
+.txttt {
+  font-size: 14px;
+  color: hsla(0, 0%, 100%, 0.64);
+  font-weight: 400;
+  line-height: 16px;
+  margin-bottom: 4px;
+}
+
+.subtxt {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.timeover {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  // text-align: center;
+}
+
+.timeover_card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  background: #282d93 url(https://images.atmequiz.com/img/cardBG.svg) no-repeat
+    top 0 left -6px;
+  border-radius: 16px;
+  padding: 0;
+  min-height: 320px;
+  background-size: contain;
+  text-align: center;
+  position: relative;
+}
+
+.lottie_winningCup {
+  width: 150px;
+  height: 150px;
+}
+
+.fntsize {
+  color: hsla(0, 0%, 100%, 0.74);
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+.tover {
+  color: #fff;
+  text-align: center;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 8px;
+}
+.score {
+  color: #5fff9f;
+  font-size: 26px;
+  vertical-align: middle;
+}
+.tover_txt {
+  font-size: 13px;
+  margin-top: 0;
+  color: #fff;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animationimg {
+  animation: blink 1.5s ease-in-out infinite alternate;
+}
+.coinspace {
+  vertical-align: middle;
+  margin-left: 4px;
+}
+.rank {
+  padding: 0;
+  position: relative;
+  color: #fff;
+  margin-bottom: 0;
+  width: 100%;
+  margin-top: 30px;
+}
+.uls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.first {
+  text-align: center;
+  padding: 0;
+  min-height: 64px;
+  background: #272c93;
+  border-top: 1px solid #4c51af;
+  border-right: 1px solid #4c51af;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+}
+
+.first:first-child {
+  border-radius: 0 0 0 16px;
+}
+.first:last-child {
+    border-right: none;
+    border-radius: 0 0 16px 0;
+}
+.digit {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 18px;
+}
+.belowtext {
+  color: #fff;
+  text-align: center;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 8px;
+}
+.btnss {
+  display: flex;
+  margin: 8px 0;
+}
+
+.btnstyling {
+  border-radius: 8px;
+  margin-right: 6px;
+  background: #f27c2c;
+  padding: 0 16px;
+  height: 56px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+  margin-top: 8px;
+  line-height: 56px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btnstyling:hover{
+  color:#fff;
+}
+.playNowanimate {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+.playnowshine {
+  position: relative;
+  overflow: hidden;
+}
+.playnowshine::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 22px;
+  background-color: hsla(0, 0%, 100%, 0.2);
+  transform: skewX(-15deg);
+  opacity: 0.6;
+  filter: blur(5px);
+  left: -10%;
+  top: 1px;
+  animation: playnowshine 1.8s ease infinite;
+}
+@keyframes playnowshine {
+  0% {
+    opacity: 0.6;
+    left: -10%;
+  }
+  66% {
+    opacity: 1;
+    left: 100%;
+  }
+  100% {
+    opacity: 1;
+    left: 100%;
+  }
+}
+.playnowblue {
+  border-radius: 8px;
+  margin-left: 6px;
+  background: #282d93;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}

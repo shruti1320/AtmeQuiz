@@ -1,0 +1,54 @@
+{
+    "Question" : [
+     {
+             "question": "India is a federal union comprising twenty-eight states and how many union territories?",
+             "answerOptions": [
+                 {
+                     "option": 1,
+                     "answer": "Six",
+                     "isCorrectAnswer": false
+                 },
+                 {
+                     "option": 2,
+                     "answer": "Seven",
+                     "isCorrectAnswer": false
+                 },
+                 {
+                     "option": 3,
+                     "answer": "Eight",
+                     "isCorrectAnswer": true
+                 },
+                 {
+                     "option": 4,
+                     "answer": "Nine",
+                     "isCorrectAnswer": false
+                 }
+             ]
+     },
+     {
+         "question": "Which of the following is the capital of Arunachal Pradesh?",
+         "answerOptions": [
+             {
+                 "option": 1,
+                 "answer": "Itanagar",
+                 "isCorrectAnswer": true
+             },
+             {
+                 "option": 2,
+                 "answer": "Dispur",
+                 "isCorrectAnswer": false
+             },
+             {
+                 "option": 3,
+                 "answer": "Imphal",
+                 "isCorrectAnswer": false
+             },
+             {
+                 "option": 4,
+                 "answer": "Panaji",
+                 "isCorrectAnswer": false
+             }
+         ]
+     }
+     ]
+ }

@@ -1,0 +1,82 @@
+showLifeline: This state variable is used to control the visibility of the lifeline component in the quiz. It starts with false to hide the lifeline by default.
+
+questionSet: This state variable stores the array of questions fetched from the API. It starts as an empty array [] and gets populated with the questions data fetched asynchronously.
+
+page: This state variable keeps track of the current page number in the quiz. It starts at 1 indicating the first page.
+
+selectedQue: This state variable holds the currently selected question object from the questionSet array based on the current page. It starts as an empty object {} and gets updated when the page changes.
+
+buttonStates: This state variable maintains the state of each answer button (option) in the quiz. It is an object with keys 1 to 4, representing the four answer options. Each key maps to a boolean value indicating whether the corresponding button is clicked or not. Initially, all buttons are set to false.
+
+disabledButtons: This state variable is used to disable all answer buttons temporarily after a button click until the next question is displayed. It starts as false, indicating that buttons are enabled by default.
+
+clicked: This state variable tracks whether any answer button has been clicked. It starts as false and is set to true when a button is clicked.
+
+chancesLeft: This state variable keeps track of the remaining lifeline chances the user has. It starts at 0 and gets updated when the user uses a lifeline. When the user clicks a lifeline, it decrements by 1, and when all lifelines are used, it stays at 0.
+
+disabled : State variable for lifeline disabled state
+
+
+
+
+
+
+
+
+
+
+
+This useEffect hook is responsible for updating the selectedQue state variable whenever the page or questionSet state variables change. Here's a breakdown:
+
+The useEffect hook is triggered whenever there is a change in the page or questionSet state variables. This is specified in the dependency array [page, questionSet].
+
+Inside the hook, it calculates the index of the selected question based on the current page number. Since the array of questions might be cycled through repeatedly (if there are fewer questions than pages), it uses the modulo operator % to ensure the selected question index wraps around to the beginning if it exceeds the length of the questionSet.
+
+It then updates the selectedQue state variable with the question object at the calculated index in the questionSet array. This ensures that the currently displayed question is updated whenever the page changes, allowing users to progress through the quiz smoothly.
+
+
+
+
+This handleButtonClick function is responsible for handling the button click event when a user selects an answer option in the quiz. Here's a breakdown of what it does:
+
+setDisabledButtons(true): It sets the disabledButtons state to true, preventing the user from clicking any answer buttons while processing the current selection.
+
+setButtonStates((prevState) => ({ ...prevState, [buttonIndex]: true })): It updates the buttonStates state by toggling the selected button to true while keeping the state of other buttons unchanged. It uses the spread operator (...prevState) to copy the previous state and then updates the state of the button corresponding to the buttonIndex to true.
+
+setClicked(true): It sets the clicked state to true, indicating that a button has been clicked.
+
+if (chancesLeft > 0) { setChancesLeft(chancesLeft - 1) }: It checks if there are any chances left for using lifelines. If there are remaining chances (chancesLeft is greater than 0), it decrements the chancesLeft state by 1, indicating that one chance has been used. This is typically used in scenarios where the quiz allows the user to use lifelines such as 50:50 or audience poll. If there are no chances left, this part of the code will not execute.
+
+
+
+
+
+
+
+
+
+
+
+This useEffect hook is responsible for handling the logic after a button click in the quiz. Here's an explanation of what it does:
+
+It runs whenever the clicked state changes. This ensures that the effect is triggered after a button click event.
+
+Inside the effect, it checks if clicked is true, indicating that a button has been clicked.
+
+If clicked is true, it sets a timeout using setTimeout. This timeout delays the execution of the code inside it by 1000 milliseconds (1 second).
+
+Inside the timeout function, it checks if chancesLeft is equal to 0. This condition is used to determine if the user has any remaining lifelines to use. If chancesLeft is 0, it means that no lifelines are available, so the page is incremented to move to the next question by setting the page state to the next page number.
+
+It then resets the buttonStates state to all false, indicating that no buttons are selected.
+
+It sets the disabledButtons state to false, allowing the user to click answer buttons again.
+
+Finally, it sets the clicked state back to false, indicating that the button click logic has been processed.
+
+This useEffect hook essentially handles the logic after a button click, including moving to the next question, resetting button states, and enabling the buttons again after a brief delay.
+
+
+
+
+
+

@@ -1,0 +1,148 @@
+.login-screen {
+  margin-top: 16px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 16px;
+  background: #282d93 url(https://images.atmequiz.com/img/coinsBg.png) no-repeat
+    50%;
+  min-height: 210px;
+  // padding: 24px;
+  padding-top: 24px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.login-text {
+  font-size: 18px;
+  color: white;
+}
+
+.login-play-text {
+  font-size: 15px;
+  color: hsla(0, 0%, 100%, 0.74);
+}
+
+.login-google-button {
+  width: 170px;
+  height: 56px;
+  line-height: 56px;
+  margin: 16px auto;
+  color: #ff7e26;
+  background: #fff;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-weight: 700;
+}
+
+.login-google-text {
+  margin-left: 8px;
+}
+
+.login-signup {
+  color: #ff7e26;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.list-container {
+    padding: 12px;
+    width: 428px;
+    min-height: 100vh;
+    min-height: 100vh !important;
+    margin: 0 auto;
+    position: relative;
+    background-color: #0e0a5f;
+    z-index: 2;
+    height: auto;
+}
+.list-section {
+  padding: 16px 0 0;
+  color: #fff;
+
+}
+
+.list-heading {
+  font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 32px;
+    position: relative;
+    text-align: center;
+
+    &::before{
+      content: "";
+    height: 3px;
+    background: #ff7e26;
+    width: 150px;
+    position: absolute;
+    top: 42px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    }
+}
+// .list-heading-underline {
+//   content: "";
+//   height: 3px;
+//   background: #ff7e26;
+//   width: 150px;
+//   position: absolute;
+//   top: 42px;
+//   right: 0;
+//   left: 0;
+//   bottom: 0;
+//   margin: auto;
+// }
+
+.list-point {
+    // line-height: 1.4;
+    // padding-bottom: 24px;
+    // padding-left: 40px;
+    // position: relative;
+    // font-size: 15px;
+    // font-weight: 400;
+    // color: #a8a5ff;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-line {
+  line-height: 1.4;
+    padding-bottom: 24px;
+    padding-left: 40px;
+    position: relative;
+    font-size: 15px;
+    font-weight: 400;
+    color: #a8a5ff;
+
+    &::before{
+      content: "";
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+
+    &::after{
+      content: "";
+    display: flex;
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    width: 5px;
+    height: 14px;
+    border: solid #a8a5ff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    }
+}

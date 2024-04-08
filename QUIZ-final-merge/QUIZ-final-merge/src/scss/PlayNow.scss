@@ -1,0 +1,152 @@
+.play-container {
+    padding: 12px;
+    width: 428px;
+    min-height: 100vh;
+    min-height: 100vh !important;
+    margin: 0 auto;
+    position: relative;
+    background-color: #0e0a5f;
+    z-index: 2;
+    height: auto;
+    color: white;
+    font-weight: 400;
+}
+
+.play-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #fff;
+    position: relative;
+    border-radius: 16px;
+    background: #1f237e;
+    margin-top: 0;
+    padding: 16px 30px 8px;
+    min-height: 200px;
+    margin-bottom: 16px;
+}
+
+.play-heading {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.play-text {
+    text-align: center;
+    margin-bottom: 12px;
+    margin-top: 2px;
+    font-size: 15px;
+    color: #b6b3ff;
+    line-height: 22px;
+}
+
+.ani {
+    animation-duration: 1s;
+    animation-duration: var(--animate-duration);
+    animation-fill-mode: both;
+}
+
+.shine {
+    position: relative;
+    overflow: hidden;
+
+    &::before{
+        content: "";
+    position: absolute;
+    height: 100%;
+    width: 22px;
+    background-color: hsla(0, 0%, 100%, .2);
+    transform: skewX(-15deg);
+    opacity: .6;
+    filter: blur(5px);
+    left: -10%;
+    top: 1px;
+    animation: playNow_shine__4E_OE 1.8s ease infinite;
+    }
+}
+
+.btn {
+    background: #f27c2c;
+    padding: 0 16px;
+    height: 56px;
+    width: 100%;
+    line-height: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 16px;
+    margin-top: 8px;
+    line-height: 56px;
+    cursor: pointer;
+}
+
+  .modal {
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    width: 428px;
+    overflow: hidden;
+    background: 0 0;
+    background: rgba(0, 0, 0, .5);
+    height: 100%;
+  }
+  
+  .modal-content {
+    // width: calc(100% - 60px);
+    height: auto;
+    // padding: 30px;
+    // position: absolute;
+    border-radius: 16px;
+    min-height: 300px;
+    // top: 25%;
+    margin: 0 30px;
+    text-align: center;
+    background: #282d93 url(https://images.atmequiz.com/img/cardBG.svg) no-repeat top 0 left -6px;
+  }
+  
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  
+  .pa {
+    color: hsla(0, 0%, 100%, .64);
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .bonusModal_listCheck {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .bonusModal_reportBtn {
+    height: 52px;
+    width: 200px;
+    font-size: 22px;
+    padding: 0;
+    float: right;
+    border-radius: 50px;
+    margin-top: 0;
+    background: #f27c2c;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+  // Additional styling can be added as needed for buttons, titles, etc.
+  

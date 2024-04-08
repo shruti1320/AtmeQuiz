@@ -1,0 +1,107 @@
+.report_inner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  width: 428px;
+  overflow: hidden;
+  background: transparent;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+}
+.report_wrapper {
+  background: #282d93;
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  position: absolute;
+  border-radius: 16px 16px 0 0;
+  min-height: 200px;
+  bottom: 0;
+}
+.report_list {
+  margin: 16px 0;
+}
+.repost_listCheck {
+  margin-top: 16px;
+}
+.report_close {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 11px;
+  top: 10px;
+  background: #0e0a5f;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.report_close::before {
+  position: absolute;
+  left: 19px;
+  top: 11px;
+  content: " ";
+  height: 18px;
+  width: 2px;
+  background-color: #fff;
+  transform: rotate(45deg);
+}
+.report_close::after {
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 19px;
+  top: 11px;
+  content: " ";
+  height: 18px;
+  width: 2px;
+  background-color: #fff;
+}
+.list1 {
+  margin-top: 16px;
+}
+.custmCheck {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+.custmcheck1 {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 5px;
+  cursor: pointer;
+}
+.custmcheck1::before {
+  border-radius: 50%;
+  background: #282d93;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+  padding: 2px;
+  margin-right: 10px;
+  text-align: center;
+  border: 2px solid hsla(0, 0%, 100%, 0.4);
+}
+.rep_btn {
+  height: 54px;
+  width: 100%;
+  font-size: 16px;
+  padding: 8px;
+  float: right;
+  border-radius: 50px;
+  margin-top: 0;
+  background: #fc8c1b;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
